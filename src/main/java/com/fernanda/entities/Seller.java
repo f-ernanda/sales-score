@@ -2,7 +2,9 @@ package com.fernanda.entities;
 
 import io.quarkus.hibernate.reactive.panache.PanacheEntity;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 
@@ -10,9 +12,10 @@ import javax.persistence.*;
 @Cacheable
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 public class Seller extends PanacheEntity {
 
-    @Column(length = 40, unique = true)
     public String name;
 
 }
